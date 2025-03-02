@@ -4,19 +4,26 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | Hexo</title>
+  <title>集合进阶内容 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="各种集合的特点， 迭代器iterator便利 增强for便利 还有lambda表达式  三种都是遍历的方法。注意使用掌握   哈希集合java上部已经成功撒花完结2024年10月29日18:59:12 下部继续啦！！！1 进阶集合双列集合P1 感觉学习的进度好慢，终于度过的JAVA学习的上部 map API  Hashmap与Treemap的区别， hash可以对加入集合的顺序 tree则无法排">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/07/21/hello-world/index.html">
+<meta property="og:title" content="集合进阶内容">
+<meta property="og:url" content="http://example.com/2024/10/26/%E9%9B%86%E5%90%88%E8%BF%9B%E9%98%B6%E5%86%85%E5%AE%B9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="各种集合的特点， 迭代器iterator便利 增强for便利 还有lambda表达式  三种都是遍历的方法。注意使用掌握   哈希集合java上部已经成功撒花完结2024年10月29日18:59:12 下部继续啦！！！1 进阶集合双列集合P1 感觉学习的进度好慢，终于度过的JAVA学习的上部 map API  Hashmap与Treemap的区别， hash可以对加入集合的顺序 tree则无法排">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-07-21T06:50:01.754Z">
-<meta property="article:modified_time" content="2024-07-21T06:50:01.754Z">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029105032191.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029185852917.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029185856315.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029222624980.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241031001811476.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241101003851222.png">
+<meta property="article:published_time" content="2024-10-25T16:56:15.000Z">
+<meta property="article:modified_time" content="2024-11-01T10:18:32.859Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029105032191.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -71,10 +78,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-集合进阶内容" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/07/21/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-21T06:50:01.754Z" itemprop="datePublished">2024-07-21</time>
+    <a href="/2024/10/26/%E9%9B%86%E5%90%88%E8%BF%9B%E9%98%B6%E5%86%85%E5%AE%B9/" class="article-date">
+  <time class="dt-published" datetime="2024-10-25T16:56:15.000Z" itemprop="datePublished">2024-10-26</time>
 </a>
     
   </div>
@@ -85,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      集合进阶内容
     </h1>
   
 
@@ -93,24 +100,33 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029105032191.png" alt="image-20241029105032191"></p>
+<p>各种集合的特点，</p>
+<p>迭代器iterator便利</p>
+<p>增强for便利</p>
+<p>还有lambda表达式 </p>
+<p>三种都是遍历的方法。注意使用掌握</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029185852917.png" alt="image-20241029185852917"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029185856315.png" alt="image-20241029185856315"></p>
+<p>哈希集合java上部已经成功撒花完结2024年10月29日18:59:12</p>
+<p>下部继续啦！！！1</p>
+<p>进阶集合双列集合P1</p>
+<p>感觉学习的进度好慢，终于度过的JAVA学习的上部</p>
+<p>map API</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241029222624980.png" alt="image-20241029222624980"></p>
+<p>Hashmap与Treemap的区别， hash可以对加入集合的顺序 tree则无法排序</p>
+<p>、、</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241031001811476.png" alt="image-20241031001811476"></p>
+<p>源码跳过，暂时不感兴趣，回头会看的</p>
+<p>集合进阶内容学完了！！ 但是个人需要加强代码编辑能力，不能眼高手低哦~</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241101003851222.png" alt="image-20241101003851222"></p>
+<p>不可变集合书写格式</p>
+<p>防止别人后续在修改集合里的内容可以用得到</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/21/hello-world/" data-id="clyxtk2uy000070td0apl194k" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/26/%E9%9B%86%E5%90%88%E8%BF%9B%E9%98%B6%E5%86%85%E5%AE%B9/" data-id="cm7rsv7or000nowtd28lbhtam" data-title="集合进阶内容" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -120,15 +136,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/07/23/first1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/11/01/%E6%96%97%E5%9C%B0%E4%B8%BB/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          first1
+          斗地主
         
       </div>
     </a>
   
+  
+    <a href="/2024/10/26/%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">算法</div>
+    </a>
   
 </nav>
 

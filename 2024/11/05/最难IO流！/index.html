@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>最难IO流！ | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="初步认识IO流 I；in O；out 流水 如同stream流   有点没搞懂 为什么可以直接使用myflie.A.TXT的路径， 第三种写法指的是一个数组中  byteB， 从第几个索引开始INT OFF 写多少个长度索引的内容进去 INT LEN  在文件中写内容的写法首先创建字符串。然后变成字符 最后使用wirte 续写 可以在 第三个提示词中写入True 默认是False 就是不能续写的意">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最难IO流！">
+<meta property="og:url" content="http://example.com/2024/11/05/%E6%9C%80%E9%9A%BEIO%E6%B5%81%EF%BC%81/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="初步认识IO流 I；in O；out 流水 如同stream流   有点没搞懂 为什么可以直接使用myflie.A.TXT的路径， 第三种写法指的是一个数组中  byteB， 从第几个索引开始INT OFF 写多少个长度索引的内容进去 INT LEN  在文件中写内容的写法首先创建字符串。然后变成字符 最后使用wirte 续写 可以在 第三个提示词中写入True 默认是False 就是不能续写的意">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106001155047.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106111729561.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106114023257.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106135851134.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106135803900.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241107192829018.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241108113633990.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241108225208904.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241109000333710.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241109193324596.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241110140647720.png">
+<meta property="article:published_time" content="2024-11-05T09:28:33.000Z">
+<meta property="article:modified_time" content="2024-11-10T06:06:48.769Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106001155047.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-最难IO流！" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/05/%E6%9C%80%E9%9A%BEIO%E6%B5%81%EF%BC%81/" class="article-date">
+  <time class="dt-published" datetime="2024-11-05T09:28:33.000Z" itemprop="datePublished">2024-11-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      最难IO流！
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>初步认识IO流 I；in O；out 流水 如同stream流</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106001155047.png" alt="image-20241106001155047"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106111729561.png" alt="image-20241106111729561"></p>
+<p>有点没搞懂 为什么可以直接使用myflie.A.TXT的路径，</p>
+<p>第三种写法指的是一个数组中  byteB， 从第几个索引开始INT OFF</p>
+<p>写多少个长度索引的内容进去 INT LEN</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106114023257.png" alt="image-20241106114023257"></p>
+<p>在文件中写内容的写法首先创建字符串。然后变成字符 最后使用wirte</p>
+<p>续写 可以在 第三个提示词中写入True 默认是False 就是不能续写的意思<img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106135851134.png" alt="image-20241106135851134"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241106135803900.png" alt="image-20241106135803900"></p>
+<p>UTF-8编码 一个中文3个字节 英文一个字节 GBK编码 中文两个字节 就是对应的2个数字 在数组中占2的长度</p>
+<p>使用的判断依据</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241107192829018.png" alt="image-20241107192829018"></p>
+<p>练习23跳过，这个地方和我之前学的mysql的内容相似程度很大2024年11月8日11:37:04<img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241108113633990.png" alt="image-20241108113633990"></p>
+<p>字符缓冲流</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241108225208904.png" alt="image-20241108225208904"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241109000333710.png" alt="image-20241109000333710"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241109193324596.png" alt="image-20241109193324596"></p>
+<p>P30的实用性很高，有点难度，非常的综合，P31暂时跳过，练习题看着都很头疼 不太想动手操作</p>
+<p>今天关联了一个jar包里面有许多已经编写好的代码，并且获得了一个io流的笔记文档1非常实用</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241110140647720.png" alt="image-20241110140647720"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/05/%E6%9C%80%E9%9A%BEIO%E6%B5%81%EF%BC%81/" data-id="cm7rsv7oq000iowtdejvpgf32" data-title="最难IO流！" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/11/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          多线程学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/11/05/File%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">File知识点</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>面相对象练习题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="T1-文字版格斗游戏格斗游戏，每个游戏角色的姓名，血量，都不相同，在选定人物的时候(new对象的时候)，这些信息就应该被确定下来。 初级版本代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import java.util.Random;public class Rol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面相对象练习题">
+<meta property="og:url" content="http://example.com/2024/10/02/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%BB%83%E4%B9%A0%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="T1-文字版格斗游戏格斗游戏，每个游戏角色的姓名，血量，都不相同，在选定人物的时候(new对象的时候)，这些信息就应该被确定下来。 初级版本代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import java.util.Random;public class Rol">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241003151228642.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241003153845733.png">
+<meta property="article:published_time" content="2024-10-02T09:03:32.000Z">
+<meta property="article:modified_time" content="2024-10-09T15:40:23.884Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241003151228642.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-面相对象练习题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/02/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%BB%83%E4%B9%A0%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2024-10-02T09:03:32.000Z" itemprop="datePublished">2024-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      面相对象练习题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>T1-文字版格斗游戏<br>格斗游戏，每个游戏角色的姓名，血量，都不相同，在选定人物的时候(new对象的时候)，这些信息<br>就应该被确定下来。</p>
+<p>初级版本代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class Role &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int blood;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public Role() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Role(String name, int blood) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.blood = blood;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getBlood() &#123;</span><br><span class="line">        return blood;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setBlood(int blood) &#123;</span><br><span class="line">        this.blood = blood;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void attack(Role role )&#123;</span><br><span class="line"></span><br><span class="line">        Random r = new Random();</span><br><span class="line">        int hurt = r.nextInt(21);</span><br><span class="line"></span><br><span class="line">        int remainblood = role.getBlood() - hurt;</span><br><span class="line"></span><br><span class="line">        remainblood = remainblood &lt;0 ? 0:remainblood;</span><br><span class="line">        role.setBlood(remainblood);</span><br><span class="line"></span><br><span class="line">        System.out.println(this.getName() + &quot;打了&quot; + role.getName() + &quot;一下，造成了&quot; + hurt +</span><br><span class="line">                role.getName()+ &quot;还剩下&quot; + remainblood + &quot;血量&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GaemTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Role</span> <span class="variable">r1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Role</span>(<span class="string">&quot;A&quot;</span>,<span class="number">100</span>);</span><br><span class="line">        <span class="type">Role</span> <span class="variable">r2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Role</span>(<span class="string">&quot;B&quot;</span>,<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">            r1.attack(r2);</span><br><span class="line">            <span class="keyword">if</span> (r2.getBlood() == <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.println(r1.getName() + <span class="string">&quot;KO&quot;</span> + r2.getName());</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            r2.attack(r1);</span><br><span class="line">            <span class="keyword">if</span> (r1.getBlood() == <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.println(r2.getName() + <span class="string">&quot;KO&quot;</span> + r1.getName());</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class Role &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int blood;</span><br><span class="line">    private String gender;</span><br><span class="line">    private String face;</span><br><span class="line">    String[] boyfaces= &#123;&quot;风流俊雅&quot;,&quot;气宇轩昂&quot;,&quot;相貌英俊&quot;,&quot;五官端正&quot;,&quot;相貌平平&quot;,&quot;一塌糊涂&quot;,&quot;面目狰狞&quot;&#125;;</span><br><span class="line">    String[] girlfaces =&#123;&quot;美奂绝伦&quot;,&quot;沉鱼落雁&quot;,&quot;婷婷玉立&quot;,&quot;身材娇好&quot;,&quot;相貌平平&quot;,&quot;相貌简陋&quot;,&quot;惨不忍睹&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    //attack 攻击描述：</span><br><span class="line">    String[] attacks_desc=&#123;</span><br><span class="line">            &quot;%s使出了一招【背心钉】，转到对方的身后，一掌向%s背心的灵台穴拍去。&quot;,</span><br><span class="line">            &quot;%s使出了一招【游空探爪】，飞起身形自半空中变掌为抓锁向%s。&quot;,</span><br><span class="line">            &quot;%s大喝一声，身形下伏，一招【劈雷坠地】，捶向%s双腿。&quot;,</span><br><span class="line">            &quot;%s运气于掌，一瞬间掌心变得血红，一式【掌心雷】，推向%s。&quot;,</span><br><span class="line">            &quot;%s阴手翻起阳手跟进，一招【没遮拦】，结结实实的捶向%s。&quot;,</span><br><span class="line">            &quot;%s上步抢身，招中套招，一招【劈挂连环】，连环攻向%s。&quot;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //injured 受伤描述：</span><br><span class="line">    String[] injureds_desc=&#123;</span><br><span class="line">            &quot;结果%s退了半步，毫发无损&quot;,</span><br><span class="line">            &quot;结果给%s造成一处瘀伤&quot;,</span><br><span class="line">            &quot;结果一击命中，%s痛得弯下腰&quot;,</span><br><span class="line">            &quot;结果%s痛苦地闷哼了一声，显然受了点内伤&quot;,</span><br><span class="line">            &quot;结果%s摇摇晃晃，一跤摔倒在地&quot;,</span><br><span class="line">            &quot;结果%s脸色一下变得惨白，连退了好几步&quot;,</span><br><span class="line">            &quot;结果『轰』的一声，%s口中鲜血狂喷而出&quot;,</span><br><span class="line">            &quot;结果%s一声惨叫，像滩软泥般塌了下去&quot;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public String getGender() &#123;</span><br><span class="line">        return gender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setGender(String gender) &#123;</span><br><span class="line">        this.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getFace() &#123;</span><br><span class="line">        return face;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setFace(String gender) &#123;</span><br><span class="line">        Random r = new Random();</span><br><span class="line">        if(gender == &quot;男&quot;)&#123;</span><br><span class="line">            int index = r.nextInt(boyfaces.length);</span><br><span class="line">            this.face = boyfaces[index];</span><br><span class="line">        &#125;else if(gender == &quot;女&quot;)&#123;</span><br><span class="line">            int index = r.nextInt(girlfaces.length);</span><br><span class="line">            this.face = girlfaces[index];</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            this.face = &quot;面目狰狞&quot;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        this.face = face;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Role() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Role(String name, int blood,String gender) &#123;</span><br><span class="line"></span><br><span class="line">        this.name = name;</span><br><span class="line">        this.gender = gender;</span><br><span class="line">        this.blood = blood;</span><br><span class="line">        setFace(gender);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getBlood() &#123;</span><br><span class="line">        return blood;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setBlood(int blood) &#123;</span><br><span class="line">        this.blood = blood;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void attack(Role role )&#123;</span><br><span class="line"></span><br><span class="line">        Random r = new Random();</span><br><span class="line">        int index = r.nextInt(attacks_desc.length);</span><br><span class="line">        String KungFu = attacks_desc[index];</span><br><span class="line"></span><br><span class="line">        //输出一个攻击的效果</span><br><span class="line">        System.out.printf(KungFu, this.getName(), role.getName());</span><br><span class="line">        System.out.println();</span><br><span class="line">        int hurt = r.nextInt(21);</span><br><span class="line"></span><br><span class="line">        int remainblood = role.getBlood() - hurt;</span><br><span class="line"></span><br><span class="line">        remainblood = remainblood &lt;0 ? 0:remainblood;</span><br><span class="line">        role.setBlood(remainblood);</span><br><span class="line"></span><br><span class="line">        System.out.println(this.getName() + &quot;打了&quot; + role.getName() + &quot;一下，造成了&quot; + hurt +</span><br><span class="line">                role.getName()+ &quot;还剩下&quot; + remainblood + &quot;血量&quot;);</span><br><span class="line">        if (remainblood &gt; 90) &#123;</span><br><span class="line">            System.out.printf(injureds_desc[0], role.getName());</span><br><span class="line">        &#125;else if(remainblood &gt; 80 &amp;&amp; remainblood &lt;= 90)&#123;</span><br><span class="line">            System.out.printf(injureds_desc[1], role.getName());</span><br><span class="line">        &#125;else if(remainblood &gt; 70 &amp;&amp; remainblood &lt;= 80)&#123;</span><br><span class="line">            System.out.printf(injureds_desc[2], role.getName());</span><br><span class="line">        &#125;else if(remainblood &gt; 60 &amp;&amp; remainblood &lt;= 70)&#123;</span><br><span class="line">            System.out.printf(injureds_desc[3], role.getName());</span><br><span class="line">        &#125;else if(remainblood &gt; 40 &amp;&amp; remainblood &lt;= 60)&#123;</span><br><span class="line">            System.out.printf(injureds_desc[4], role.getName());</span><br><span class="line">        &#125;else if(remainblood &gt; 20 &amp;&amp; remainblood &lt;= 40)&#123;</span><br><span class="line">            System.out.printf(injureds_desc[5], role.getName());</span><br><span class="line">        &#125;else if(remainblood &gt; 10 &amp;&amp; remainblood &lt;= 20)&#123;</span><br><span class="line">            System.out.printf(injureds_desc[6], role.getName());</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            System.out.printf(injureds_desc[7], role.getName());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public void inf()&#123;</span><br><span class="line">        System.out.println(&quot;性别为&quot;+getGender());</span><br><span class="line">        System.out.println(&quot;血量&quot;+getBlood());</span><br><span class="line">        System.out.println(&quot;长相&quot;+getFace());</span><br><span class="line">        System.out.println(&quot;姓名&quot;+getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class GaemTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Role r1 = new Role(&quot;A&quot;,100,&quot;男&quot;);</span><br><span class="line">        Role r2 = new Role(&quot;B&quot;,100,&quot;男&quot;);</span><br><span class="line"></span><br><span class="line">        r1.inf();</span><br><span class="line">        r2.inf();</span><br><span class="line"></span><br><span class="line">        while(true) &#123;</span><br><span class="line">            r1.attack(r2);</span><br><span class="line">            if (r2.getBlood() == 0) &#123;</span><br><span class="line">                System.out.println(r1.getName() + &quot;KO&quot; + r2.getName());</span><br><span class="line">                break;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            r2.attack(r1);</span><br><span class="line">            if (r1.getBlood() == 0) &#123;</span><br><span class="line">                System.out.println(r2.getName() + &quot;KO&quot; + r1.getName());</span><br><span class="line"></span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改后的简易化洛克王国游戏 哈哈哈哈哈哈哈哈哈！</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241003151228642.png" alt="image-20241003151228642"></p>
+<p>T2——-</p>
+<p>对象数组1</p>
+<p>定义数组存储3个商品对象。<br>商品的属性:商品的id，名字，价格，库存。<br>创建三个商品对象，并把商品对象存入到数组当中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package Test7;</span><br><span class="line"></span><br><span class="line">public class goodtest   &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Goods[] arr = new Goods[3];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Goods g1 = new Goods(&quot;001&quot;,&quot;huawei&quot;,5999.0,&quot;100&quot;);</span><br><span class="line">        Goods g2 = new Goods(&quot;002&quot;,&quot;apple&quot;,6999.0,&quot;500&quot;);</span><br><span class="line">        Goods g3 = new Goods(&quot;003&quot;,&quot;lemon&quot;,15.2,&quot;700&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        arr[0] = g1;</span><br><span class="line">        arr[1] = g2;</span><br><span class="line">        arr[2] = g3;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            Goods good = arr[i];</span><br><span class="line">            System.out.println(good.getCount() +good.getName() + good.getId() + good.getPrice());</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">package Test7;</span><br><span class="line"></span><br><span class="line">public class Goods &#123;</span><br><span class="line">    private String id;</span><br><span class="line">    private String name;</span><br><span class="line">    private double price;</span><br><span class="line">    private String count;</span><br><span class="line"></span><br><span class="line">    public Goods() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Goods(String id, String name, double price, String count) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.price = price;</span><br><span class="line">        this.count = count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(String id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public double getPrice() &#123;</span><br><span class="line">        return price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setPrice(double price) &#123;</span><br><span class="line">        this.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getCount() &#123;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setCount(String count) &#123;</span><br><span class="line">        this.count = count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>easy 注意事项为 arr。for时</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241003153845733.png" alt="image-20241003153845733"></p>
+<p>此处的good虽然可以任意一个变量 但是必须要填，才能调用方法</p>
+<p>面向数组的练习题暂时跳过345 回头再来联系</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/02/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%BB%83%E4%B9%A0%E9%A2%98/" data-id="cm1yk1k6j00086ktd71ej6qrv" data-title="面相对象练习题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/10/09/%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          字符串
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/10/01/%E5%85%B3%E9%94%AE%E8%A7%86%E9%A2%91P/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关键视频P</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>字符串 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="创建字符串的2种方法 new对象比较少用到实践之中  节约内存 可以通过堆内存中的地址值赋值  ctrl alt + t 可以快捷使用语句包含内容  SHIFT+F6  可以快速选中同一变量中的名称 12345678910111213141516171819202122232425public class test1 &#123;    public static void main(Strin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串">
+<meta property="og:url" content="http://example.com/2024/10/09/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="创建字符串的2种方法 new对象比较少用到实践之中  节约内存 可以通过堆内存中的地址值赋值  ctrl alt + t 可以快捷使用语句包含内容  SHIFT+F6  可以快速选中同一变量中的名称 12345678910111213141516171819202122232425public class test1 &#123;    public static void main(Strin">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124440662.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124737928.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124814991.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241013204138349.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014192236941.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014212540524.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014214231726.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014233822536.png">
+<meta property="article:published_time" content="2024-10-09T15:41:30.000Z">
+<meta property="article:modified_time" content="2024-10-15T11:38:34.351Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124440662.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-字符串" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/09/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time class="dt-published" datetime="2024-10-09T15:41:30.000Z" itemprop="datePublished">2024-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      字符串
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124440662.png" alt="image-20241010124440662"></p>
+<p>创建字符串的2种方法</p>
+<p>new对象比较少用到实践之中</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124737928.png" alt="image-20241010124737928"></p>
+<p>节约内存 可以通过堆内存中的地址值赋值</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241010124814991.png" alt="image-20241010124814991"></p>
+<p>ctrl alt + t 可以快捷使用语句包含内容<img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241013204138349.png" alt="image-20241013204138349"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014192236941.png" alt="image-20241014192236941"></p>
+<p>SHIFT+F6 </p>
+<p>可以快速选中同一变量中的名称</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class test1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        String result = reverse(&quot;abc&quot;);</span><br><span class="line">        System.out.println(result);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public static String reverse(String str )&#123;</span><br><span class="line"></span><br><span class="line">        String result = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">        for (int i = str.length()-1; i &gt;= 0; i--) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            char c = str.charAt(i);</span><br><span class="line">            result = result + c;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        return  result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看似很简单的一个测试 实则还是没有手写出来 难度还是不小 不要眼高手低</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014212540524.png" alt="image-20241014212540524"></p>
+<p>练习题9,10没做，回头必须补上，调到P106学习</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014214231726.png" alt="image-20241014214231726"></p>
+<p>stringbuilder 常用方法， stringbuilder sb &#x3D; new stringbuilder()</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241014233822536.png" alt="image-20241014233822536"></p>
+<p>字符串P108-110练习题跳过 比较有难度</p>
+<p>2024年10月15日19:38:33</p>
+<p>进入下一章节</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/09/%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="cm7rsv7on000cowtdasg70xds" data-title="字符串" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/10/15/%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          集合
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/10/02/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%BB%83%E4%B9%A0%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面相对象练习题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

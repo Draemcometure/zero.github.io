@@ -69,10 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-LeeCode每日一题：有效括号" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/07/21/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-21T06:50:01.754Z" itemprop="datePublished">2024-07-21</time>
+    <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/" class="article-date">
+  <time class="dt-published" datetime="2025-03-01T13:31:47.000Z" itemprop="datePublished">2025-03-01</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/21/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
     </h1>
   
 
@@ -91,24 +91,509 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p>“有效括号” 是力扣（LeetCode）上的一道经典题目，题目描述为：给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;&#125;&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li><p>左括号必须用相同类型的右括号闭合。</p>
+</li>
+<li><p>左括号必须以正确的顺序闭合。</p>
+</li>
+<li><p>每个右括号都有一个对应的相同类型的左括号。</p>
+</li>
+<li><p>以下是使用 Java 语言解决 “有效括号” 问题的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ValidParentheses</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个栈来存储左括号</span></span><br><span class="line">        Stack&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 遍历字符串中的每个字符</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">&#x27;(&#x27;</span> || c == <span class="string">&#x27;&#123;&#x27;</span> || c == <span class="string">&#x27;[&#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// 如果是左括号，直接压入栈中</span></span><br><span class="line">                stack.push(c);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 如果是右括号</span></span><br><span class="line">                <span class="keyword">if</span> (stack.isEmpty()) &#123;</span><br><span class="line">                    <span class="comment">// 栈为空，没有匹配的左括号，返回 false</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">char</span> <span class="variable">top</span> <span class="operator">=</span> stack.pop();</span><br><span class="line">                <span class="keyword">if</span> ((c == <span class="string">&#x27;)&#x27;</span> &amp;&amp; top != <span class="string">&#x27;(&#x27;</span>) || (c == <span class="string">&#x27;&#125;&#x27;</span> &amp;&amp; top != <span class="string">&#x27;&#123;&#x27;</span>) || (c == <span class="string">&#x27;]&#x27;</span> &amp;&amp; top != <span class="string">&#x27;[&#x27;</span>)) &#123;</span><br><span class="line">                    <span class="comment">// 栈顶元素与当前右括号不匹配，返回 false</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 遍历结束后，如果栈为空，说明所有括号都匹配，返回 true；否则返回 false</span></span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ValidParentheses</span> <span class="variable">solution</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ValidParentheses</span>();</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;()[]&#123;&#125;&quot;</span>;</span><br><span class="line">        System.out.println(solution.isValid(s)); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+
+
+<p>简单来说就是如何通过条件从首位开始判断一个括号然后对比与其他括号，从而判断这个括号是否有效。这也就导致了我们每次必须保证其他括号不变，然后只能判断一个括号是否有效，所以我们的遍历思想只能运用于括号类型的判断，如果要判断是否有效，如果继续使用遍历判断我们就会发现我们并不能实现：</p>
+<h3 id="代码解释："><a href="#代码解释：" class="headerlink" title="代码解释："></a>代码解释：</h3><ol>
+<li><strong>创建栈</strong>：使用 <code>Stack&lt;Character&gt;</code> 来存储左括号。</li>
+<li><strong>遍历字符串</strong>：使用 <code>toCharArray()</code> 方法将字符串转换为字符数组，然后遍历每个字符。</li>
+<li><strong>处理左括号</strong>：如果字符是左括号（<code>&#39;(&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;[&#39;</code>），将其压入栈中。</li>
+<li><strong>处理右括号</strong>：如果字符是右括号，首先检查栈是否为空。如果栈为空，说明没有匹配的左括号，返回 <code>false</code>。然后弹出栈顶元素，检查栈顶元素是否与当前右括号匹配。如果不匹配，返回 <code>false</code>。</li>
+<li><strong>检查栈是否为空</strong>：遍历结束后，如果栈为空，说明所有括号都匹配，返回 <code>true</code>；否则返回 <code>false</code>。</li>
+</ol>
+<h3 id="复杂度分析："><a href="#复杂度分析：" class="headerlink" title="复杂度分析："></a>复杂度分析：</h3><ul>
+<li><strong>时间复杂度</strong>：(O(n))，其中 n 是字符串的长度。因为只需要遍历一次字符串。</li>
+<li><strong>空间复杂度</strong>：(O(n))，在最坏情况下，所有的字符都是左括号，栈的空间复杂度为 (O(n))。</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/21/hello-world/" data-id="clyxtk2uy000070td0apl194k" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/" data-id="cm7rsv7o90002owtd0qyx1ppp" data-title="12" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-做一个普京发牌—PokerGame" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/" class="article-date">
+  <time class="dt-published" datetime="2025-02-28T13:19:08.000Z" itemprop="datePublished">2025-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="首先需要理解时序图："><a href="#首先需要理解时序图：" class="headerlink" title="首先需要理解时序图："></a>首先需要理解时序图：</h4><p><img src="https://upload-images.jianshu.io/upload_images/28041182-62e6fcdb3e0914d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/865/format/webp" alt="img"></p>
+<p>这是一个游戏正常的表面流程，登陆—&gt;进入游戏—&gt;开始游戏—&gt;根据游戏规则进行游戏—&gt;游戏结束。那么我们就可以为这个游戏实现不同流程的区域，并且让他们相邻流程的耦合性更强，这样就需要使用面向对象的方式。</p>
+<p>在这款纸牌游戏里，玩家选项无疑最为关键。我们为此制定如下规则：<br>下注环节，后下注者的下注金额不得低于前面下注者的金额；跟注时，金额需与之前下注者一致；若选择弃牌，已投入的资金将留在奖池中，后续 Allin 返钱时，弃牌者无法获得资金。比牌开始时，发起比牌的玩家需先进行下注。一旦有人选择 Allin，其他玩家仅能选择弃牌或者同样 Allin。</p>
+<p>规则既定，接下来明确游戏结束的情形。实际上，仅存在两种情况会导致游戏结束：其一，所有玩家都选择 Allin；其二，历经所有比牌流程后，牌桌上仅剩下一名玩家。</p>
+<p>好，下面我们先从较为简单的弃牌和 Allin 操作着手。</p>
+<h3 id="1-1-1-0-弃牌和-Allin"><a href="#1-1-1-0-弃牌和-Allin" class="headerlink" title="1.1.1.0 弃牌和 Allin"></a>1.1.1.0 弃牌和 Allin</h3><p>在进入这部分程序逻辑之前，我们需要清楚如何遍历每一位玩家。这里我们采用一种类似链表的方法来寻找下一位玩家。<br>我们将 start 设定为头指针，以此为起点寻找下一位玩家。为避免数组越界，采用取余的方式来循环遍历。需要注意的是，寻找到的下一位玩家必须仍处于游戏中。</p>
+<h3 id="1-1-1-1-弃牌"><a href="#1-1-1-1-弃牌" class="headerlink" title="1.1.1.1 弃牌"></a>1.1.1.1 弃牌</h3><p>这里借助 Kotlin 特有的语法，以实时记录的方式来实现弃牌功能。<br>关于 gameOver () 函数，其原理是通过程序结束函数来判定游戏是否结束。因为我们清楚，若有三名玩家弃牌，那么剩余的那一位玩家便可赢得全部奖金。</p>
+<h3 id="1-1-1-2-ALL-IN"><a href="#1-1-1-2-ALL-IN" class="headerlink" title="1.1.1.2 ALL_IN"></a>1.1.1.2 ALL_IN</h3><p>依据之前制定的规则，当有玩家选择 ALL_IN 时，其余玩家只能选择 ALL_IN 或者弃牌。所以，我们需要一个变量来标记是否有玩家率先选择 ALL_IN，若有，记录下其下标。<br>由于 ALL_IN 这一操作，当轮到下一位玩家操作时，其操作界面会发生变化。若已有玩家选择过 ALL_IN，那么该玩家只能在弃牌和 ALL_IN 中做选择。</p>
+<h3 id="1-1-1-3-跟注"><a href="#1-1-1-3-跟注" class="headerlink" title="1.1.1.3 跟注"></a>1.1.1.3 跟注</h3><p>为实现跟注功能，我们设置一个全局数据成员 LastBet，用于记录每次最小跟注的金额。该操作相对简单易懂。</p>
+<h3 id="1-1-1-4-下注"><a href="#1-1-1-4-下注" class="headerlink" title="1.1.1.4 下注"></a>1.1.1.4 下注</h3><p>这部分的实现相对复杂一些。玩家下注的金额不仅要大于 LastBet，而且所下赌注需要保存下来，以便后续在整合返还多余资金时作为参考依据。</p>
+<h3 id="1-1-1-5-比牌"><a href="#1-1-1-5-比牌" class="headerlink" title="1.1.1.5 比牌"></a>1.1.1.5 比牌</h3><p>比牌操作首先要进行下注，随后选择参与比较的玩家。但要注意，所选玩家必须是尚未弃牌、仍在牌局中的玩家。<br>大致原理便是如此，不过要留意，比牌失败的玩家将退出牌局。</p>
+<h3 id="1-1-5-结束游戏的情况"><a href="#1-1-5-结束游戏的情况" class="headerlink" title="1.1.5 结束游戏的情况"></a>1.1.5 结束游戏的情况</h3><h4 id="1-1-5-1-只剩下一个人的情况"><a href="#1-1-5-1-只剩下一个人的情况" class="headerlink" title="1.1.5.1 只剩下一个人的情况"></a>1.1.5.1 只剩下一个人的情况</h4><p>在此情形下，我们需要对存活人数进行实时监测。</p>
+<h4 id="1-1-5-2-剩下所有人-ALL-IN-的情况"><a href="#1-1-5-2-剩下所有人-ALL-IN-的情况" class="headerlink" title="1.1.5.2 剩下所有人 ALL_IN 的情况"></a>1.1.5.2 剩下所有人 ALL_IN 的情况</h4><p>我们知道，一旦有玩家选择 ALL_IN，其首个 ALL_IN 的位置值会被保存下来。当移动的下标再次回到首个 ALL_IN 值的位置时，意味着游戏结束。不过，这种结束情况与只剩一人的情况有所不同。由于每位玩家 ALL_IN 投入牌桌的金额各异，为确保公平，在进行大小比较之前，需将最小的 ALL_IN 值作为每位玩家实际投入的金额，同时将多余的资金返还给每位玩家（已退出牌局的玩家除外）。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/" data-id="cm7rsv7om000bowtd9at62xd6" data-title="123" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-LeeCode每日一题：盛水最多的容器++双指针的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2025-02-28T13:13:40.000Z" itemprop="datePublished">2025-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>对于与数组子串相关的题我们以及见过很多了，根据遍历可以很轻松的将所有子串进行组合，但是我们针对不同类型的题目，可以通过一定的排除方式进行子串的挑选，这样可以让我们的程序更加高效。</p>
+<h2 id="题目：盛水最多的容器"><a href="#题目：盛水最多的容器" class="headerlink" title="题目：盛水最多的容器"></a>题目：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://leetcode.cn/problems/container-with-most-water/">盛水最多的容器</a></h2><p>(点进去查看题目）</p>
+<h2 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这道题可以使用双指针法来解决，具体思路如下：</p>
+<ol>
+<li>初始化两个指针，一个在数组的起始位置（设为 <code>left</code>），一个在数组的末尾位置（设为 <code>right</code>）。</li>
+<li>计算当前两个指针所指的高度形成的容器的盛水量，盛水量等于两个指针之间的距离（<code>right - left</code>）乘以两个指针中较小的高度（<code>min(height[left], height[right])</code>）。</li>
+<li>比较当前的盛水量和已记录的最大盛水量，更新最大盛水量。</li>
+<li>移动指针：将指向较矮高度的指针向中间移动一位（即如果 <code>height[left] &lt; height[right]</code>，则 <code>left++</code>；否则 <code>right--</code>）。</li>
+<li>重复步骤 2 到 4，直到两个指针相遇（即 <code>left &gt;= right</code>）。</li>
+</ol>
+<ul>
+<li>最复杂简单的方法</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span> </span>&#123;</span><br><span class="line">         <span class="type">int</span> mincompare=<span class="number">0</span>;</span><br><span class="line">         <span class="type">int</span> maxContent=<span class="number">0</span>;</span><br><span class="line">         <span class="type">int</span> nowContent=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; height.length<span class="number">-1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i<span class="number">+1</span>; j &lt;height.length; j++) &#123;</span><br><span class="line">                mincompare=Math.<span class="built_in">min</span>(height[i],height[j]);</span><br><span class="line">                nowContent=mincompare*(j-i);</span><br><span class="line">                <span class="keyword">if</span>(nowContent&gt;maxContent)</span><br><span class="line">                &#123;</span><br><span class="line">                    maxContent=nowContent;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxContent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样我们没有使用限定方式，直接将每一个子串的容积记录下来，然后再进行连续比较，但是这样的消耗的时间是O（n2），是不符合我们题目所容忍的时间的。所以我们要运用一个可以降低时间消耗的方式。</p>
+<ul>
+<li>双指针连续判断<br> 我们先看代码。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> l = <span class="number">0</span>, r = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> Maxarea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="type">int</span> Nowarea = Math.<span class="built_in">min</span>(height[l], height[r]) * (r - l);</span><br><span class="line">           Maxarea = Math.<span class="built_in">max</span>(Maxarea, Nowarea);</span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt;= height[r]) &#123;</span><br><span class="line">                ++l;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(height[l] &gt; height[r])&#123;</span><br><span class="line">                --r;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Maxarea;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们将数组起始点作为第一个指针，然后取最后一个数为最后一个指针。<br> 那么我们为什么在比较两个指针的大小后就能判断让哪一个移动呢?</p>
+<h3 id="指针移动的原理"><a href="#指针移动的原理" class="headerlink" title="指针移动的原理"></a>指针移动的原理</h3><p>首先我们要知道我们为什么要移动指针。</p>
+<ul>
+<li>现在假如我们的左指针所对应的数是比右指针大的，但是这时我们需要移动一次右指针，这是为什么呢？</li>
+<li>假如我们移动较大的<strong>左指针</strong>那么，我们接下来是不可能找到比原来数组所组成的容积的。因为除了左指针的数，那么这个数组要么含有比右指针小，要么相等，要么比它大——比它小的话，那么因为横向长度变小，而且高度变小，所以一定是比原本数组所组成的小的。跟它相等的话，那么因为横向长度变小，所以也一定是比原本数组所组成的小的。比它大的话，因为高度不变，因为横向长度变小，所以也一定是比原本数组所组成的小的。所以综上情况，当左指针所对应的数是比右指针大的，这时我们需要移动一次右指针，而不是移动较大的指针</li>
+<li>同理我们可以知道右指针所对应的数是比左指针大的，但是这时我们需要移动一次左指针。</li>
+<li>那么当两个指针对应数相同时，我们移动哪一个指针呢？<br> 实际上移动哪一个指针都是可以的，因为无论是移动哪一个相同的指针，另外一个指针都会将应该遍历的数组所遍历完的，直到遇到下一个两指针相同，或者当左指针与右指针相遇。所以可以知道当遇到相同的情况时，移动左右指针都是一样的。</li>
+<li>这样我们的时间复杂度则大大降低，我们面向的不再是子串，而是两个指针。</li>
+</ul>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="结果思考"><a href="#结果思考" class="headerlink" title="结果思考"></a>结果思考</h3><ol>
+<li><strong>时间复杂度</strong>：双指针法的时间复杂度为 <em>O</em>(<em>n</em>)，其中 <code>n</code> 是数组 <code>height</code> 的长度。因为两个指针从两端向中间移动，最多移动 <code>n</code> 次。</li>
+<li><strong>空间复杂度</strong>：空间复杂度为 <em>O</em>(1)，因为只使用了有限的额外空间（两个指针和一些变量）。</li>
+<li><strong>正确性证明</strong>：这种方法的正确性在于，每次移动较矮的指针，虽然容器的宽度减少了，但有可能找到更高的高度来弥补宽度的减少，从而得到更大的盛水量。而如果移动较高的指针，由于容器的高度受限于较矮的一边，且宽度减少，所以盛水量必然不会增加。</li>
+<li><strong>拓展应用</strong>：双指针法在解决一些需要在数组或序列中寻找最优解的问题时非常有效，特别是那些涉及到两个边界或端点的问题。可以将这种思路应用到其他类似的题目中，如寻找两个数之和等于目标值的问题等。</li>
+</ol>
+<p>通过双指针法，我们可以高效地解决 “盛水最多的容器” 问题，并深入理解这种算法的应用场景和优势。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="cm7rsv7oa0003owtd1ltre9f2" data-title="1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-prj" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/01/27/prj/" class="article-date">
+  <time class="dt-published" datetime="2025-01-27T04:33:46.000Z" itemprop="datePublished">2025-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/01/27/prj/">prj</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/01/27/prj/" data-id="cm7rsv7oc0007owtddrlr75tr" data-title="prj" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ajax" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/01/17/ajax/" class="article-date">
+  <time class="dt-published" datetime="2025-01-17T06:57:54.000Z" itemprop="datePublished">2025-01-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/01/17/ajax/">ajax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20250117145828368.png" alt="image-20250117145828368"></p>
+<p>异步</p>
+<p>javaweb的所有基础内容已经学完，现在结束对web的学习 即将踏入对实际项目的实践！2025年1月23日14:48:34</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/01/17/ajax/" data-id="cm7rsv7ob0004owtd5tp27uaz" data-title="ajax" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-webvue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/01/17/webvue/" class="article-date">
+  <time class="dt-published" datetime="2025-01-17T06:39:52.000Z" itemprop="datePublished">2025-01-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/01/17/webvue/">webvue</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>vue 的常用指令如下 内容比较简单 就是一些简单的判断</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20250117145715296.png" alt="image-20250117145715296"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/01/17/webvue/" data-id="cm7rsv7ol000aowtd116t5y1r" data-title="webvue" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-WebJS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/25/WebJS/" class="article-date">
+  <time class="dt-published" datetime="2024-11-25T11:45:33.000Z" itemprop="datePublished">2024-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/25/WebJS/">WebJS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>输出语句的方法：</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241126005724416.png" alt="image-20241126005724416"></p>
+<p>运算符的转化方法</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241127204824439.png" alt="image-20241127204824439"></p>
+<p>函数的定义与调用，</p>
+<p>JS是弱类型语言，所以不需要定义变量的数据类型即可使用</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241127205910488.png" alt="image-20241127205910488"></p>
+<p>没想到已经一个多月没有学习web的课程了，其中驾照 期末考试 四六级 消耗占用了我太多时间， 今天放假了 继续准备学习！！！</p>
+<p>JS的数组arr中 长度可以随意改变 类型也可以随意使用， 使用限制比较小</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20250111001104608.png" alt="image-20250111001104608"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20250111002334887.png" alt="image-20250111002334887"></p>
+<p>遍历数组 forarr</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20250116114408884.png" alt="image-20250116114408884"></p>
+<p>Windows自带对象 settime可以是定时器 很有用的规律弹窗</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20250116114523919.png" alt="image-20250116114523919"></p>
+<p>href就相当于点击一个地方 自动跳转到其他页面 非常实用</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/25/WebJS/" data-id="cm7rsv7oc0006owtd4ohseayx" data-title="WebJS" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-javaWeb" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/24/javaWeb/" class="article-date">
+  <time class="dt-published" datetime="2024-11-24T15:30:07.000Z" itemprop="datePublished">2024-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/24/javaWeb/">javaWeb</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>从这篇MD之后 就开始的JAVAWeb的学习，学习视频为<img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241124233046592.png" alt="image-20241124233046592"></p>
+<p>总时长42H 不知道要多久才能完成这个的学习呢？</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241124234847190.png" alt="image-20241124234847190"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125002545287.png" alt="image-20241125002545287"></p>
+<p>web前端的组成部分</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125103343218.png" alt="image-20241125103343218"></p>
+<p>HTML 和CSS的定义</p>
+<p>CSS选择器的使用，可以针对某一的部分进行修改</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125192052310.png" alt="image-20241125192052310"></p>
+<p>超链接就是可以从当前网页的关键词跳转到另一个网页，可以本网页 也可以新建网页</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125192541764.png" alt="image-20241125192541764"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125192951471.png" alt="image-20241125192951471"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125193015576.png" alt="image-20241125193015576"></p>
+<p>TEXT-ALIGN:right 可以右对齐</p>
+<p>相应可以是left</p>
+<p>盒子模型</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125193550649.png" alt="image-20241125193550649"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125193607489.png" alt="image-20241125193607489"></p>
+<p>为了整体的布局而生~</p>
+<p>表格：</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125193810920.png" alt="image-20241125193810920"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125193832154.png" alt="image-20241125193832154"></p>
+<p>border就是最外围的横线</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125194248104.png" alt="image-20241125194248104"></p>
+<p>表单的关键词</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241125194351900.png" alt="image-20241125194351900"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/24/javaWeb/" data-id="cm7rsv7ob0005owtdac036bii" data-title="javaWeb" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-reflex" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/22/reflex/" class="article-date">
+  <time class="dt-published" datetime="2024-11-21T16:24:43.000Z" itemprop="datePublished">2024-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/22/reflex/">reflex</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>终于也是到了JAVASE的最终篇，反射，学习了太长太长一段时间了，400P的视频内容实在让人难以快速吸收消化，不过整体下来还是可以理解慢慢吃透的。</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241123001433039.png" alt="image-20241123001433039"></p>
+<p>反射就是把一个数学科目的所有分支展示给你 </p>
+<p>获取对象的三种方法 第一种最为常用</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241123001913523.png" alt="image-20241123001913523"></p>
+<p>先创造对象，然后即可获取构造方法</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241123001842287.png" alt="image-20241123001842287"></p>
+<p>获取成员方法：</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241123001946944.png" alt="image-20241123001946944"></p>
+<p>2024年11月23日00:39:20 在这个时间，终于完成了JAVASE的所有练习，真的如释重负 太难熬了 这段时间的学习，这个学期事情很多 练车，四六级 还有最关键的JAVA学习，都是非常重要的因素，不过一切都在逐步进行， 加油吧骚年~</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241123004052465.png" alt="image-20241123004052465"></p>
+<p>谁能想象，居然用了三个月的时间 才完成了400P的javaSE！！！不过这是最基础的内容，静下脚步 或许也不是一件坏事！希望接下来能够加快进度吧，</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/22/reflex/" data-id="cm7rsv7od0008owtd3bm40pum" data-title="reflex" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-网络编程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/22/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2024-11-21T16:24:30.000Z" itemprop="datePublished">2024-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/22/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>网络编程的定义：</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241122004107427.png" alt="image-20241122004107427"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241122004313848.png" alt="image-20241122004313848"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241122004345868.png" alt="image-20241122004345868"></p>
+<p>这一部分感觉也挺容易的，就是基本的一些发送信息和接受信息的内容</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241122232944914.png" alt="image-20241122232944914"></p>
+<p>三次握手就是保证链接的完整建立，可以传输和接收</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241122233030598.png" alt="image-20241122233030598"></p>
+<p>四次挥手为了确保链接断开</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241122233103227.png" alt="image-20241122233103227"></p>
+<p>此部分内容也没有实际操作，感觉内容很简单 和之前所说重复性较高 开始最后的反射部分吧！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/22/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" data-id="cm7rsv7oq000jowtd6azngqwt" data-title="网络编程" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -121,6 +606,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -138,7 +628,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
     </div>
   </div>
 
@@ -151,7 +641,23 @@
       <ul>
         
           <li>
-            <a href="/2024/07/21/hello-world/">Hello World</a>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
           </li>
         
       </ul>
@@ -167,7 +673,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2024 John Doe<br>
+      &copy; 2025 John Doe<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

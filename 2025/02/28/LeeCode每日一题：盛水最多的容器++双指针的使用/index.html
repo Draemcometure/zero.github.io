@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>1 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="引言对于与数组子串相关的题我们以及见过很多了，根据遍历可以很轻松的将所有子串进行组合，但是我们针对不同类型的题目，可以通过一定的排除方式进行子串的挑选，这样可以让我们的程序更加高效。 题目：盛水最多的容器(点进去查看题目） 解法：解题思路这道题可以使用双指针法来解决，具体思路如下：  初始化两个指针，一个在数组的起始位置（设为 left），一个在数组的末尾位置（设为 right）。 计算当前两个指">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1">
+<meta property="og:url" content="http://example.com/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="引言对于与数组子串相关的题我们以及见过很多了，根据遍历可以很轻松的将所有子串进行组合，但是我们针对不同类型的题目，可以通过一定的排除方式进行子串的挑选，这样可以让我们的程序更加高效。 题目：盛水最多的容器(点进去查看题目） 解法：解题思路这道题可以使用双指针法来解决，具体思路如下：  初始化两个指针，一个在数组的起始位置（设为 left），一个在数组的末尾位置（设为 right）。 计算当前两个指">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-02-28T13:13:40.000Z">
+<meta property="article:modified_time" content="2025-02-28T13:16:38.364Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-LeeCode每日一题：盛水最多的容器++双指针的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2025-02-28T13:13:40.000Z" itemprop="datePublished">2025-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      1
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>对于与数组子串相关的题我们以及见过很多了，根据遍历可以很轻松的将所有子串进行组合，但是我们针对不同类型的题目，可以通过一定的排除方式进行子串的挑选，这样可以让我们的程序更加高效。</p>
+<h2 id="题目：盛水最多的容器"><a href="#题目：盛水最多的容器" class="headerlink" title="题目：盛水最多的容器"></a>题目：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://leetcode.cn/problems/container-with-most-water/">盛水最多的容器</a></h2><p>(点进去查看题目）</p>
+<h2 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这道题可以使用双指针法来解决，具体思路如下：</p>
+<ol>
+<li>初始化两个指针，一个在数组的起始位置（设为 <code>left</code>），一个在数组的末尾位置（设为 <code>right</code>）。</li>
+<li>计算当前两个指针所指的高度形成的容器的盛水量，盛水量等于两个指针之间的距离（<code>right - left</code>）乘以两个指针中较小的高度（<code>min(height[left], height[right])</code>）。</li>
+<li>比较当前的盛水量和已记录的最大盛水量，更新最大盛水量。</li>
+<li>移动指针：将指向较矮高度的指针向中间移动一位（即如果 <code>height[left] &lt; height[right]</code>，则 <code>left++</code>；否则 <code>right--</code>）。</li>
+<li>重复步骤 2 到 4，直到两个指针相遇（即 <code>left &gt;= right</code>）。</li>
+</ol>
+<ul>
+<li>最复杂简单的方法</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span> </span>&#123;</span><br><span class="line">         <span class="type">int</span> mincompare=<span class="number">0</span>;</span><br><span class="line">         <span class="type">int</span> maxContent=<span class="number">0</span>;</span><br><span class="line">         <span class="type">int</span> nowContent=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; height.length<span class="number">-1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i<span class="number">+1</span>; j &lt;height.length; j++) &#123;</span><br><span class="line">                mincompare=Math.<span class="built_in">min</span>(height[i],height[j]);</span><br><span class="line">                nowContent=mincompare*(j-i);</span><br><span class="line">                <span class="keyword">if</span>(nowContent&gt;maxContent)</span><br><span class="line">                &#123;</span><br><span class="line">                    maxContent=nowContent;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxContent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样我们没有使用限定方式，直接将每一个子串的容积记录下来，然后再进行连续比较，但是这样的消耗的时间是O（n2），是不符合我们题目所容忍的时间的。所以我们要运用一个可以降低时间消耗的方式。</p>
+<ul>
+<li>双指针连续判断<br> 我们先看代码。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> l = <span class="number">0</span>, r = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> Maxarea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="type">int</span> Nowarea = Math.<span class="built_in">min</span>(height[l], height[r]) * (r - l);</span><br><span class="line">           Maxarea = Math.<span class="built_in">max</span>(Maxarea, Nowarea);</span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt;= height[r]) &#123;</span><br><span class="line">                ++l;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(height[l] &gt; height[r])&#123;</span><br><span class="line">                --r;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Maxarea;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们将数组起始点作为第一个指针，然后取最后一个数为最后一个指针。<br> 那么我们为什么在比较两个指针的大小后就能判断让哪一个移动呢?</p>
+<h3 id="指针移动的原理"><a href="#指针移动的原理" class="headerlink" title="指针移动的原理"></a>指针移动的原理</h3><p>首先我们要知道我们为什么要移动指针。</p>
+<ul>
+<li>现在假如我们的左指针所对应的数是比右指针大的，但是这时我们需要移动一次右指针，这是为什么呢？</li>
+<li>假如我们移动较大的<strong>左指针</strong>那么，我们接下来是不可能找到比原来数组所组成的容积的。因为除了左指针的数，那么这个数组要么含有比右指针小，要么相等，要么比它大——比它小的话，那么因为横向长度变小，而且高度变小，所以一定是比原本数组所组成的小的。跟它相等的话，那么因为横向长度变小，所以也一定是比原本数组所组成的小的。比它大的话，因为高度不变，因为横向长度变小，所以也一定是比原本数组所组成的小的。所以综上情况，当左指针所对应的数是比右指针大的，这时我们需要移动一次右指针，而不是移动较大的指针</li>
+<li>同理我们可以知道右指针所对应的数是比左指针大的，但是这时我们需要移动一次左指针。</li>
+<li>那么当两个指针对应数相同时，我们移动哪一个指针呢？<br> 实际上移动哪一个指针都是可以的，因为无论是移动哪一个相同的指针，另外一个指针都会将应该遍历的数组所遍历完的，直到遇到下一个两指针相同，或者当左指针与右指针相遇。所以可以知道当遇到相同的情况时，移动左右指针都是一样的。</li>
+<li>这样我们的时间复杂度则大大降低，我们面向的不再是子串，而是两个指针。</li>
+</ul>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="结果思考"><a href="#结果思考" class="headerlink" title="结果思考"></a>结果思考</h3><ol>
+<li><strong>时间复杂度</strong>：双指针法的时间复杂度为 <em>O</em>(<em>n</em>)，其中 <code>n</code> 是数组 <code>height</code> 的长度。因为两个指针从两端向中间移动，最多移动 <code>n</code> 次。</li>
+<li><strong>空间复杂度</strong>：空间复杂度为 <em>O</em>(1)，因为只使用了有限的额外空间（两个指针和一些变量）。</li>
+<li><strong>正确性证明</strong>：这种方法的正确性在于，每次移动较矮的指针，虽然容器的宽度减少了，但有可能找到更高的高度来弥补宽度的减少，从而得到更大的盛水量。而如果移动较高的指针，由于容器的高度受限于较矮的一边，且宽度减少，所以盛水量必然不会增加。</li>
+<li><strong>拓展应用</strong>：双指针法在解决一些需要在数组或序列中寻找最优解的问题时非常有效，特别是那些涉及到两个边界或端点的问题。可以将这种思路应用到其他类似的题目中，如寻找两个数之和等于目标值的问题等。</li>
+</ol>
+<p>通过双指针法，我们可以高效地解决 “盛水最多的容器” 问题，并深入理解这种算法的应用场景和优势。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="cm7rsv7oa0003owtd1ltre9f2" data-title="1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          123
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/01/27/prj/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">prj</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

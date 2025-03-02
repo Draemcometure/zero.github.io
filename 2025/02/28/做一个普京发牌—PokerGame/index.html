@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>123 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="首先需要理解时序图： 这是一个游戏正常的表面流程，登陆—&gt;进入游戏—&gt;开始游戏—&gt;根据游戏规则进行游戏—&gt;游戏结束。那么我们就可以为这个游戏实现不同流程的区域，并且让他们相邻流程的耦合性更强，这样就需要使用面向对象的方式。 在这款纸牌游戏里，玩家选项无疑最为关键。我们为此制定如下规则：下注环节，后下注者的下注金额不得低于前面下注者的金额；跟注时，金额需与之前下注者一致；若选">
+<meta property="og:type" content="article">
+<meta property="og:title" content="123">
+<meta property="og:url" content="http://example.com/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="首先需要理解时序图： 这是一个游戏正常的表面流程，登陆—&gt;进入游戏—&gt;开始游戏—&gt;根据游戏规则进行游戏—&gt;游戏结束。那么我们就可以为这个游戏实现不同流程的区域，并且让他们相邻流程的耦合性更强，这样就需要使用面向对象的方式。 在这款纸牌游戏里，玩家选项无疑最为关键。我们为此制定如下规则：下注环节，后下注者的下注金额不得低于前面下注者的金额；跟注时，金额需与之前下注者一致；若选">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/28041182-62e6fcdb3e0914d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/865/format/webp">
+<meta property="article:published_time" content="2025-02-28T13:19:08.000Z">
+<meta property="article:modified_time" content="2025-02-28T13:23:41.309Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/28041182-62e6fcdb3e0914d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/865/format/webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-做一个普京发牌—PokerGame" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/" class="article-date">
+  <time class="dt-published" datetime="2025-02-28T13:19:08.000Z" itemprop="datePublished">2025-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      123
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="首先需要理解时序图："><a href="#首先需要理解时序图：" class="headerlink" title="首先需要理解时序图："></a>首先需要理解时序图：</h4><p><img src="https://upload-images.jianshu.io/upload_images/28041182-62e6fcdb3e0914d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/865/format/webp" alt="img"></p>
+<p>这是一个游戏正常的表面流程，登陆—&gt;进入游戏—&gt;开始游戏—&gt;根据游戏规则进行游戏—&gt;游戏结束。那么我们就可以为这个游戏实现不同流程的区域，并且让他们相邻流程的耦合性更强，这样就需要使用面向对象的方式。</p>
+<p>在这款纸牌游戏里，玩家选项无疑最为关键。我们为此制定如下规则：<br>下注环节，后下注者的下注金额不得低于前面下注者的金额；跟注时，金额需与之前下注者一致；若选择弃牌，已投入的资金将留在奖池中，后续 Allin 返钱时，弃牌者无法获得资金。比牌开始时，发起比牌的玩家需先进行下注。一旦有人选择 Allin，其他玩家仅能选择弃牌或者同样 Allin。</p>
+<p>规则既定，接下来明确游戏结束的情形。实际上，仅存在两种情况会导致游戏结束：其一，所有玩家都选择 Allin；其二，历经所有比牌流程后，牌桌上仅剩下一名玩家。</p>
+<p>好，下面我们先从较为简单的弃牌和 Allin 操作着手。</p>
+<h3 id="1-1-1-0-弃牌和-Allin"><a href="#1-1-1-0-弃牌和-Allin" class="headerlink" title="1.1.1.0 弃牌和 Allin"></a>1.1.1.0 弃牌和 Allin</h3><p>在进入这部分程序逻辑之前，我们需要清楚如何遍历每一位玩家。这里我们采用一种类似链表的方法来寻找下一位玩家。<br>我们将 start 设定为头指针，以此为起点寻找下一位玩家。为避免数组越界，采用取余的方式来循环遍历。需要注意的是，寻找到的下一位玩家必须仍处于游戏中。</p>
+<h3 id="1-1-1-1-弃牌"><a href="#1-1-1-1-弃牌" class="headerlink" title="1.1.1.1 弃牌"></a>1.1.1.1 弃牌</h3><p>这里借助 Kotlin 特有的语法，以实时记录的方式来实现弃牌功能。<br>关于 gameOver () 函数，其原理是通过程序结束函数来判定游戏是否结束。因为我们清楚，若有三名玩家弃牌，那么剩余的那一位玩家便可赢得全部奖金。</p>
+<h3 id="1-1-1-2-ALL-IN"><a href="#1-1-1-2-ALL-IN" class="headerlink" title="1.1.1.2 ALL_IN"></a>1.1.1.2 ALL_IN</h3><p>依据之前制定的规则，当有玩家选择 ALL_IN 时，其余玩家只能选择 ALL_IN 或者弃牌。所以，我们需要一个变量来标记是否有玩家率先选择 ALL_IN，若有，记录下其下标。<br>由于 ALL_IN 这一操作，当轮到下一位玩家操作时，其操作界面会发生变化。若已有玩家选择过 ALL_IN，那么该玩家只能在弃牌和 ALL_IN 中做选择。</p>
+<h3 id="1-1-1-3-跟注"><a href="#1-1-1-3-跟注" class="headerlink" title="1.1.1.3 跟注"></a>1.1.1.3 跟注</h3><p>为实现跟注功能，我们设置一个全局数据成员 LastBet，用于记录每次最小跟注的金额。该操作相对简单易懂。</p>
+<h3 id="1-1-1-4-下注"><a href="#1-1-1-4-下注" class="headerlink" title="1.1.1.4 下注"></a>1.1.1.4 下注</h3><p>这部分的实现相对复杂一些。玩家下注的金额不仅要大于 LastBet，而且所下赌注需要保存下来，以便后续在整合返还多余资金时作为参考依据。</p>
+<h3 id="1-1-1-5-比牌"><a href="#1-1-1-5-比牌" class="headerlink" title="1.1.1.5 比牌"></a>1.1.1.5 比牌</h3><p>比牌操作首先要进行下注，随后选择参与比较的玩家。但要注意，所选玩家必须是尚未弃牌、仍在牌局中的玩家。<br>大致原理便是如此，不过要留意，比牌失败的玩家将退出牌局。</p>
+<h3 id="1-1-5-结束游戏的情况"><a href="#1-1-5-结束游戏的情况" class="headerlink" title="1.1.5 结束游戏的情况"></a>1.1.5 结束游戏的情况</h3><h4 id="1-1-5-1-只剩下一个人的情况"><a href="#1-1-5-1-只剩下一个人的情况" class="headerlink" title="1.1.5.1 只剩下一个人的情况"></a>1.1.5.1 只剩下一个人的情况</h4><p>在此情形下，我们需要对存活人数进行实时监测。</p>
+<h4 id="1-1-5-2-剩下所有人-ALL-IN-的情况"><a href="#1-1-5-2-剩下所有人-ALL-IN-的情况" class="headerlink" title="1.1.5.2 剩下所有人 ALL_IN 的情况"></a>1.1.5.2 剩下所有人 ALL_IN 的情况</h4><p>我们知道，一旦有玩家选择 ALL_IN，其首个 ALL_IN 的位置值会被保存下来。当移动的下标再次回到首个 ALL_IN 值的位置时，意味着游戏结束。不过，这种结束情况与只剩一人的情况有所不同。由于每位玩家 ALL_IN 投入牌桌的金额各异，为确保公平，在进行大小比较之前，需将最小的 ALL_IN 值作为每位玩家实际投入的金额，同时将多余的资金返还给每位玩家（已退出牌局的玩家除外）。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/" data-id="cm7rsv7om000bowtd9at62xd6" data-title="123" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          12
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

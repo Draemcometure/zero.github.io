@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>面相对象PLUS | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="静态变量的使用关键在于是否属于共享，static 比如一个班级的老师     就近原则的变量调用语句   跳过此P  final就是一个方法不想被改变时候用的关键词 权限修饰符的作用范围  接口部分比较简单，内容略写，，此部分跳过练习、、 抽象类的关键词abstract：可以规定后续的写法是某种特定的格式  内部类的四大类型：成员内部类，静态内部类 匿名内部类 ，局部内部类  ​					面相对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面相对象PLUS">
+<meta property="og:url" content="http://example.com/2024/10/16/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1PLUS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="静态变量的使用关键在于是否属于共享，static 比如一个班级的老师     就近原则的变量调用语句   跳过此P  final就是一个方法不想被改变时候用的关键词 权限修饰符的作用范围  接口部分比较简单，内容略写，，此部分跳过练习、、 抽象类的关键词abstract：可以规定后续的写法是某种特定的格式  内部类的四大类型：成员内部类，静态内部类 匿名内部类 ，局部内部类  ​					面相对">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018002129139.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241016233956205.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018002724222.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018004628824.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241019111636590.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241020175903084.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241020194528624.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241021153351622.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241021195422737.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241022001452096.png">
+<meta property="og:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241022002734804.png">
+<meta property="article:published_time" content="2024-10-16T13:22:40.000Z">
+<meta property="article:modified_time" content="2024-10-21T16:29:00.019Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018002129139.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-面相对象PLUS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/16/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1PLUS/" class="article-date">
+  <time class="dt-published" datetime="2024-10-16T13:22:40.000Z" itemprop="datePublished">2024-10-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      面相对象PLUS
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018002129139.png"></p>
+<p>静态变量的使用关键在于是否属于共享，static 比如一个班级的老师</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241016233956205.png" alt="image-20241016233956205"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018002724222.png" alt="image-20241018002724222"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241018004628824.png" alt="image-20241018004628824"></p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241019111636590.png" alt="image-20241019111636590"></p>
+<p>就近原则的变量调用语句</p>
+<img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241020175903084.png" alt="image-20241020175903084" style="zoom:200%;" />
+
+<p>跳过此P</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241020194528624.png" alt="image-20241020194528624"></p>
+<p>final就是一个方法不想被改变时候用的关键词</p>
+<p>权限修饰符的作用范围</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241021153351622.png" alt="image-20241021153351622"></p>
+<p>接口部分比较简单，内容略写，，此部分跳过练习、、<img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241021195422737.png" alt="image-20241021195422737"></p>
+<p>抽象类的关键词abstract：可以规定后续的写法是某种特定的格式</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241022001452096.png" alt="image-20241022001452096"></p>
+<p>内部类的四大类型：成员内部类，静态内部类 匿名内部类</p>
+<p>，局部内部类</p>
+<p><img src="C:\Users\qishao\AppData\Roaming\Typora\typora-user-images\image-20241022002734804.png" alt="image-20241022002734804"></p>
+<p>​					面相对象的内容终于学完了，这次学习中复现最多的就是</p>
+<p>student s &#x3D; new student（）；</p>
+<p>这方面内容比较需要创造力想象，的确有点难度，加油学习吧 章节结束了！2024年10月22日00:28:58</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/16/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1PLUS/" data-id="cm7rsv7os000oowtd98cv59bs" data-title="面相对象PLUS" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/10/22/%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE%E7%BB%83%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          阶段项目练习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/10/16/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学生管理系统</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

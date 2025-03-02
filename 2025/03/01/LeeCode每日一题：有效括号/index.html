@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>12 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="“有效括号” 是力扣（LeetCode）上的一道经典题目，题目描述为：给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;&#123;&#39;，&#39;&#125;&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满足：  左括号必须用相同类型的右括号闭合。  左括号必须以正确的顺序闭合。  每个右括号都有一个对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12">
+<meta property="og:url" content="http://example.com/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="“有效括号” 是力扣（LeetCode）上的一道经典题目，题目描述为：给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;&#123;&#39;，&#39;&#125;&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满足：  左括号必须用相同类型的右括号闭合。  左括号必须以正确的顺序闭合。  每个右括号都有一个对">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-01T13:31:47.000Z">
+<meta property="article:modified_time" content="2025-03-01T13:35:16.401Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-LeeCode每日一题：有效括号" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/" class="article-date">
+  <time class="dt-published" datetime="2025-03-01T13:31:47.000Z" itemprop="datePublished">2025-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      12
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>“有效括号” 是力扣（LeetCode）上的一道经典题目，题目描述为：给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;&#125;&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li><p>左括号必须用相同类型的右括号闭合。</p>
+</li>
+<li><p>左括号必须以正确的顺序闭合。</p>
+</li>
+<li><p>每个右括号都有一个对应的相同类型的左括号。</p>
+</li>
+<li><p>以下是使用 Java 语言解决 “有效括号” 问题的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ValidParentheses</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个栈来存储左括号</span></span><br><span class="line">        Stack&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 遍历字符串中的每个字符</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">&#x27;(&#x27;</span> || c == <span class="string">&#x27;&#123;&#x27;</span> || c == <span class="string">&#x27;[&#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// 如果是左括号，直接压入栈中</span></span><br><span class="line">                stack.push(c);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 如果是右括号</span></span><br><span class="line">                <span class="keyword">if</span> (stack.isEmpty()) &#123;</span><br><span class="line">                    <span class="comment">// 栈为空，没有匹配的左括号，返回 false</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">char</span> <span class="variable">top</span> <span class="operator">=</span> stack.pop();</span><br><span class="line">                <span class="keyword">if</span> ((c == <span class="string">&#x27;)&#x27;</span> &amp;&amp; top != <span class="string">&#x27;(&#x27;</span>) || (c == <span class="string">&#x27;&#125;&#x27;</span> &amp;&amp; top != <span class="string">&#x27;&#123;&#x27;</span>) || (c == <span class="string">&#x27;]&#x27;</span> &amp;&amp; top != <span class="string">&#x27;[&#x27;</span>)) &#123;</span><br><span class="line">                    <span class="comment">// 栈顶元素与当前右括号不匹配，返回 false</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 遍历结束后，如果栈为空，说明所有括号都匹配，返回 true；否则返回 false</span></span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ValidParentheses</span> <span class="variable">solution</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ValidParentheses</span>();</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;()[]&#123;&#125;&quot;</span>;</span><br><span class="line">        System.out.println(solution.isValid(s)); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>简单来说就是如何通过条件从首位开始判断一个括号然后对比与其他括号，从而判断这个括号是否有效。这也就导致了我们每次必须保证其他括号不变，然后只能判断一个括号是否有效，所以我们的遍历思想只能运用于括号类型的判断，如果要判断是否有效，如果继续使用遍历判断我们就会发现我们并不能实现：</p>
+<h3 id="代码解释："><a href="#代码解释：" class="headerlink" title="代码解释："></a>代码解释：</h3><ol>
+<li><strong>创建栈</strong>：使用 <code>Stack&lt;Character&gt;</code> 来存储左括号。</li>
+<li><strong>遍历字符串</strong>：使用 <code>toCharArray()</code> 方法将字符串转换为字符数组，然后遍历每个字符。</li>
+<li><strong>处理左括号</strong>：如果字符是左括号（<code>&#39;(&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;[&#39;</code>），将其压入栈中。</li>
+<li><strong>处理右括号</strong>：如果字符是右括号，首先检查栈是否为空。如果栈为空，说明没有匹配的左括号，返回 <code>false</code>。然后弹出栈顶元素，检查栈顶元素是否与当前右括号匹配。如果不匹配，返回 <code>false</code>。</li>
+<li><strong>检查栈是否为空</strong>：遍历结束后，如果栈为空，说明所有括号都匹配，返回 <code>true</code>；否则返回 <code>false</code>。</li>
+</ol>
+<h3 id="复杂度分析："><a href="#复杂度分析：" class="headerlink" title="复杂度分析："></a>复杂度分析：</h3><ul>
+<li><strong>时间复杂度</strong>：(O(n))，其中 n 是字符串的长度。因为只需要遍历一次字符串。</li>
+<li><strong>空间复杂度</strong>：(O(n))，在最坏情况下，所有的字符都是左括号，栈的空间复杂度为 (O(n))。</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/" data-id="cm7rsv7o90002owtd0qyx1ppp" data-title="12" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">123</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/01/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/">12</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/%E5%81%9A%E4%B8%80%E4%B8%AA%E6%99%AE%E4%BA%AC%E5%8F%91%E7%89%8C%E2%80%94PokerGame/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/28/LeeCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%9A%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8++%E5%8F%8C%E6%8C%87%E9%92%88%E7%9A%84%E4%BD%BF%E7%94%A8/">1</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/27/prj/">prj</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/17/ajax/">ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
